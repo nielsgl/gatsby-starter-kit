@@ -5,5 +5,5 @@
  */
 
 module.exports = {
-  /* Your site config here */
+	/* Your site config here */
 }
