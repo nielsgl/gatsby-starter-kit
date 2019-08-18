@@ -6,8 +6,9 @@
 		"airbnb",
 		"prettier"
 	],
-	"plugins": ["react", "import"],
+	"plugins": ["react", "jsx-a11y", "import"],
 	"rules": {
-		"strict": 0
+		"strict": "warn",
+		"react/prefer-stateless-function": "warn"
 	}
 }
