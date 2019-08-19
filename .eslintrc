@@ -1,14 +1,10 @@
 {
 	"parser": "babel-eslint",
-	"extends": [
-		"eslint:recommended",
-		"plugin:react/recommended",
-		"airbnb",
-		"prettier"
-	],
+	"extends": ["eslint:recommended", "airbnb", "prettier", "prettier/react"],
 	"plugins": ["react", "jsx-a11y", "import"],
 	"rules": {
 		"strict": "warn",
-		"react/prefer-stateless-function": "warn"
+		"react/prefer-stateless-function": "warn",
+		"react/prop-types": "warn"
 	}
 }
