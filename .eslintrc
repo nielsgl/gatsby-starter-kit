@@ -1,10 +1,12 @@
 {
 	"parser": "babel-eslint",
 	"extends": ["eslint:recommended", "airbnb", "prettier", "prettier/react"],
-	"plugins": ["react", "jsx-a11y", "import"],
+	"plugins": ["react", "import"],
 	"rules": {
 		"strict": "warn",
 		"react/prefer-stateless-function": "warn",
-		"react/prop-types": "warn"
+		"react/prop-types": "warn",
+		"quotes": ["error", "double", { "avoidEscape": true }],
+		"jsx-a11y/anchor-is-valid": "warn"
 	}
 }
