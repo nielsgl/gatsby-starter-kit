@@ -119,20 +119,21 @@ module.exports = {
 					return ret;
 				},
 				query: `
-				{
-					site {
-						siteMetadata {
-							rssMetadata {
-								site_url
-								feed_url
-								title
-								description
-								image_url
-								copyright
+					{
+						site {
+							siteMetadata {
+								rssMetadata {
+									site_url
+									feed_url
+									title
+									description
+									image_url
+									copyright
+								}
 							}
 						}
 					}
-				}`,
+				`,
 				feeds: [
 					{
 						serialize(ctx) {
@@ -156,10 +157,14 @@ module.exports = {
 								})
 							);
 						},
-						query: `{
-							allMarkdownRemark(
-								limit: 1000,
-								sort: { order: DESC, fields: [fields___date] },
+						query: `
+							{
+								allMarkdownRemark(
+									limit: 1000
+									sort: {
+										order: DESC
+										fields: [fields___date]
+									}
 								) {
 									edges {
 										node {
@@ -180,7 +185,8 @@ module.exports = {
 										}
 									}
 								}
-							}`,
+							}
+						`,
 						output: config.siteRss,
 					},
 				],
