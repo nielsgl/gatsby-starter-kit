@@ -1,5 +1,12 @@
 {
 	"eslint.alwaysShowStatus": true,
 	"eslint.autoFixOnSave": true,
-	"eslint.packageManager": "yarn"
+	"eslint.packageManager": "yarn",
+	"spellright.language": [
+		"en"
+	],
+	"spellright.documentTypes": [
+		"latex",
+		"plaintext"
+	]
 }

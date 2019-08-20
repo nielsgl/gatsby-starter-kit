@@ -1,9 +1,9 @@
 const config = {
-	siteTitle: "Gatsby Advanced Starter", // Site title.
-	siteTitleShort: "GA Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-	siteTitleAlt: "GatsbyJS Advanced Starter", // Alternative site title for SEO.
+	siteTitle: "Niels van Galen Last", // Site title.
+	siteTitleShort: "NielsGL", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+	siteTitleAlt: "Niels van Galen Last Data Scientist", // Alternative site title for SEO.
 	siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-	siteUrl: "http://localhost:9000", // Domain of your website without pathPrefix.
+	siteUrl: "http://dev.nielsgl.com", // Domain of your website without pathPrefix.
 	pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
 	siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
 	siteRss: "/rss.xml", // Path to the RSS file.
@@ -15,7 +15,7 @@ const config = {
 	dateFormat: "DD/MM/YYYY", // Date format for display.
 	userName: "Advanced User", // Username to display in the author segment.
 	userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment
-	userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
+	userTwitter: "nielsgl", // Optionally renders "Follow Me" in the UserInfo segment.
 	userLocation: "North Pole, Earth", // User location to display in the author segment.
 	userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
 	userDescription:
