@@ -72,6 +72,7 @@
 	"main": "n/a",
 	"scripts": {
 		"build": "gatsby build",
+		"clean:build": "yarn clean && yarn build",
 		"dev": "yarn clean && yarn develop",
 		"develop": "gatsby develop",
 		"serve": "gatsby serve",
