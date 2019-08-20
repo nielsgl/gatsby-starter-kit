@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
 import urljoin from "url-join";
 import config from "../../../data/SiteConfig";
 
-class SEO extends Component {
+class SEO extends PureComponent {
 	render() {
 		const { postNode, postPath, postSEO } = this.props;
 		let title;

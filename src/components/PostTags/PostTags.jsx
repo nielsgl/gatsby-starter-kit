@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import _ from "lodash";
 import { Link } from "gatsby";
 
-class PostTags extends Component {
+class PostTags extends PureComponent {
 	render() {
 		const { tags } = this.props;
 		return (

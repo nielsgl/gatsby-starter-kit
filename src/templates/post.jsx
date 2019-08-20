@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
@@ -11,7 +11,7 @@ import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 
-export default class PostTemplate extends React.Component {
+export default class PostTemplate extends PureComponent {
 	render() {
 		const { data, pageContext } = this.props;
 		const { slug } = pageContext;

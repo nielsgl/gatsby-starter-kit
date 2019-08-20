@@ -1,9 +1,9 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
 import config from "../../data/SiteConfig";
 import "./index.css";
 
-export default class MainLayout extends React.Component {
+export default class MainLayout extends PureComponent {
 	render() {
 		const { children } = this.props;
 		return (
