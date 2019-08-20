@@ -7,8 +7,12 @@ import config from "../../data/SiteConfig";
 
 export default class CategoryTemplate extends PureComponent {
 	render() {
-		const { category } = this.props.pageContext;
-		const postEdges = this.props.data.allMarkdownRemark.edges;
+		const {
+			pageContext: { category },
+			data: {
+				allMarkdownRemark: { edges },
+			},
+		} = this.props;
 		return (
 			<Layout>
 				<div className="category-container">
@@ -16,7 +20,7 @@ export default class CategoryTemplate extends PureComponent {
 						title={`Posts in category "${category}" | ${config.siteTitle}`}
 						defer={false}
 					/>
-					<PostListing postEdges={postEdges} />
+					<PostListing postEdges={edges} />
 				</div>
 			</Layout>
 		);

@@ -3,8 +3,11 @@ import { Follow } from "react-twitter-widgets";
 
 class UserInfo extends PureComponent {
 	render() {
-		const { userTwitter } = this.props.config;
-		const { expanded } = this.props;
+		const {
+			config: { userTwitter },
+			expanded,
+		} = this.props;
+		// const { expanded } = this.props;
 		return (
 			<Follow
 				username={userTwitter}

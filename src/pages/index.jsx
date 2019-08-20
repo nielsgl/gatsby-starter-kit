@@ -1,4 +1,4 @@
-import React, {PureComponent} from "react";
+import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
@@ -8,13 +8,17 @@ import config from "../../data/SiteConfig";
 
 class Index extends PureComponent {
 	render() {
-		const postEdges = this.props.data.allMarkdownRemark.edges;
+		const {
+			data: {
+				allMarkdownRemark: { edges },
+			},
+		} = this.props;
 		return (
 			<Layout>
 				<div className="index-container">
 					<Helmet title={config.siteTitle} defer={false} />
 					<SEO />
-					<PostListing postEdges={postEdges} />
+					<PostListing postEdges={edges} />
 					<p>foo</p>
 				</div>
 			</Layout>
