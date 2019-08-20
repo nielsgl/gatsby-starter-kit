@@ -7,7 +7,7 @@ class UserLinks extends Component {
 			config: { userLinks },
 			labeled,
 		} = this.props;
-		// const { labeled } = this.props;
+
 		return userLinks.map(link => (
 			<button key={link.label} href={link.url} type="button">
 				{labeled ? link.label : ""}
