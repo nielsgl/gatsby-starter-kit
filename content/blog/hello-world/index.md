@@ -1,7 +1,14 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+title: Hello World Again
+date: "20/08/2019"
 description: "This is an optional description for SEO and Open Graph purposes, rather than the default generated excerpt."
+cover: "https://unsplash.it/400/300/?random?BigTest"
+category: "math"
+slug: "Math-Katex-Hello"
+tags:
+    - math
+    - test
+    - katex
 ---
 
 Let's see does this work: $a^2 + b^2 = c^2$
