@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import config from "../../data/config";
 
 class Index extends PureComponent {
 	render() {
@@ -18,8 +18,8 @@ class Index extends PureComponent {
 				<div className="index-container">
 					<Helmet title={config.siteTitle} defer={false} />
 					<SEO />
+					<h1>Index</h1>
 					<PostListing postEdges={edges} />
-					<p>foo</p>
 				</div>
 			</Layout>
 		);

@@ -1,6 +1,12 @@
 ---
 title: "Hello, World!"
 description: This is an optional description for SEO and Open Graph purposes, rather than the default generated excerpt.
+cover: "https://unsplash.it/400/300/?random?BigTest"
+category: "test"
+# slug: "Big-Sample_Test"
+tags:
+    - test
+    - huge
 ---
 
 # Hello, World! (Again)

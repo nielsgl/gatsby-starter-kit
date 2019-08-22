@@ -1,26 +1,27 @@
 import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
+
+import SEO from "components/SEO/SEO";
 import Layout from "layout";
 import PostListing from "components/PostListing/PostListing";
-import config from "../../data/config";
+// import PostListing from "../../components/PostListing/PostListing";
 
-export default class TagTemplate extends PureComponent {
+import config from "../../../data/config";
+
+class Index extends PureComponent {
 	render() {
 		const {
-			pageContext: { tag },
 			data: {
 				allMarkdownRemark: { edges },
 			},
 		} = this.props;
-		// const postEdges = this.props.data.allMarkdownRemark.edges;
 		return (
 			<Layout>
-				<div className="tag-container">
-					<Helmet
-						title={`Posts tagged as "${tag}" | ${config.siteTitle}`}
-						defer={false}
-					/>
+				<div className="index-container">
+					<Helmet title={config.siteTitle} defer={false} />
+					<SEO />
+					<h1>Blog</h1>
 					<PostListing postEdges={edges} />
 				</div>
 			</Layout>
@@ -28,15 +29,15 @@ export default class TagTemplate extends PureComponent {
 	}
 }
 
+export default Index;
+
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-	query TagPage($tag: String) {
+	query BlogIndexQuery {
 		allMarkdownRemark(
-			limit: 1000
-			sort: { fields: [fields___date], order: DESC }
-			filter: { frontmatter: { tags: { in: [$tag] } } }
+			limit: 2000
+			sort: { fields: [frontmatter___date], order: DESC }
 		) {
-			totalCount
 			edges {
 				node {
 					fields {

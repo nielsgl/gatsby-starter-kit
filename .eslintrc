@@ -16,6 +16,14 @@
 			}
 		],
 		"react/destructuring-assignment": "warn",
-		"react/no-access-state-in-setstate": "warn"
+		"react/no-access-state-in-setstate": "warn",
+		"import/no-unresolved": "warn"
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"moduleDirectory": ["node_modules", "src/"]
+			}
+		}
 	}
 }
