@@ -1,7 +1,8 @@
 ---
-title: My first post
-date: 2019-08-20T16:30:04.335Z
-description: This is my first post
+title: "My first post"
+date: "2019-08-20T16:30:04.335Z"
+cover: "https://unsplash.it/400/300/?random?BigTest"
+description: "This is my first post"
 ---
 # Hello Friend.
 
