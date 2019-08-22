@@ -4,8 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const path = require("path");
 const urljoin = require("url-join");
-const config = require("./data/SiteConfig");
+
+const config = require("./data/config");
 
 module.exports = {
 	pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
@@ -29,7 +31,16 @@ module.exports = {
 	},
 	plugins: [
 		"gatsby-plugin-eslint",
-
+		{
+			resolve: "gatsby-plugin-root-import",
+			options: {
+				src: path.join(__dirname, "src"),
+				assets: path.join(__dirname, "src/assets"),
+				components: path.join(__dirname, "src/components"),
+				layout: path.join(__dirname, "src/layout"),
+				templates: path.join(__dirname, "src/templates"),
+			},
+		},
 		"gatsby-plugin-sass",
 		"gatsby-plugin-lodash",
 		"@gatsby-contrib/gatsby-transformer-ipynb",

@@ -1,13 +1,14 @@
 import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
-import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
+
+import Layout from "layout";
+import UserInfo from "components/UserInfo/UserInfo";
 // import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import PostTags from "components/PostTags/PostTags";
+import SocialLinks from "components/SocialLinks/SocialLinks";
+import SEO from "components/SEO/SEO";
+import config from "../../data/config";
 // import "./b16-tomorrow-dark.css";
 import "prismjs/themes/prism-tomorrow.css";
 import "./post.css";
