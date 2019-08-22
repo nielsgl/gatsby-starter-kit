@@ -8,6 +8,7 @@ import UserInfo from "components/UserInfo/UserInfo";
 import PostTags from "components/PostTags/PostTags";
 import SocialLinks from "components/SocialLinks/SocialLinks";
 import SEO from "components/SEO/SEO";
+import PostCategories from "components/PostCategories/PostCategories";
 import config from "../../data/config";
 // import "./b16-tomorrow-dark.css";
 import "prismjs/themes/prism-tomorrow.css";
@@ -43,6 +44,7 @@ export default class PostTemplate extends PureComponent {
 						/>
 						<div className="post-meta">
 							<PostTags tags={post.tags} />
+							<PostCategories tags={post.tags} />
 							<SocialLinks postPath={slug} postNode={postNode} />
 						</div>
 						<UserInfo config={config} />
