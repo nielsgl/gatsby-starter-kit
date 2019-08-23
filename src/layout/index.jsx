@@ -15,7 +15,8 @@ export default class Layout extends PureComponent {
 				</Helmet>
 				<Link to="/">Home</Link>&nbsp;
 				<Link to="/blog">Blog</Link>&nbsp;
-				<Link to="/about">About</Link>
+				<Link to="/about">About</Link>&nbsp;
+				<Link to="/foo">Foo</Link>
 				{children}
 			</div>
 		);

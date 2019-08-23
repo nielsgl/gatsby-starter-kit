@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 class PostCategories extends PureComponent {
 	render() {
-		console.log("PostCategories props", this.props);
+		// console.log("PostCategories props", this.props);
 		const { tags } = this.props;
 		return (
 			<div className="post-tag-container">

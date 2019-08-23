@@ -4,7 +4,7 @@ date: "20/08/2019"
 description: "This is an optional description for SEO and Open Graph purposes, rather than the default generated excerpt."
 cover: "https://unsplash.it/400/300/?random?BigTest"
 category: "math"
-slug: "Math-Katex-Hello"
+slug: "Math-Katex-Hello-blog"
 tags:
     - math
     - test
@@ -33,4 +33,4 @@ Oh, and here's a great quote from this Wikipedia on
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+![Chinese Salty Egg](salty_egg.jpg)

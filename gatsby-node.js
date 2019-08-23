@@ -8,6 +8,8 @@ const path = require("path");
 const _ = require("lodash");
 const moment = require("moment");
 
+const { createFilePath } = require("gatsby-source-filesystem");
+
 const siteConfig = require("./data/config");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -54,11 +56,25 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 		}
 		createNodeField({ node, name: "slug", value: slug });
 	}
+	if (node.internal.type === "JupyterNotebook") {
+		const filename = path.parse(node.fileAbsolutePath);
+		console.log("filename", filename);
+		console.log("parent", getNode(node.parent).relativePath);
+		console.log(createFilePath({ node, getNode, basePath: "notez" }));
+		console.log(node.internal.type);
+
+		createNodeField({
+			node,
+			name: "slug",
+			value: `/notes/${filename.name.replace(/_/gi, "-")}/`,
+		});
+	}
 };
 
 exports.createPages = async ({ graphql, actions }) => {
 	const { createPage } = actions;
 	const postPage = path.resolve("src/templates/post.jsx");
+	const notePage = path.resolve("src/templates/note.jsx");
 	const tagPage = path.resolve("src/templates/tag.jsx");
 	const categoryPage = path.resolve("src/templates/category.jsx");
 
@@ -84,15 +100,59 @@ exports.createPages = async ({ graphql, actions }) => {
 		`
 	);
 
+	const notesQueryResult = await graphql(`
+		{
+			allJupyterNotebook {
+				edges {
+					node {
+						id
+						metadata {
+							kernelspec {
+								name
+								language
+								display_name
+							}
+						}
+						html
+						json {
+							nbformat
+							nbformat_minor
+							cells {
+								cell_type
+								execution_count
+							}
+						}
+						internal {
+							content
+						}
+						fileAbsolutePath
+						fields {
+							slug
+						}
+					}
+				}
+				# totalCount
+			}
+		}
+	`);
+
+	console.log(JSON.stringify(notesQueryResult, null, 4));
+
 	if (markdownQueryResult.errors) {
-		console.error(markdownQueryResult.errors);
+		console.error("ERROR", markdownQueryResult.errors);
 		throw markdownQueryResult.errors;
 	}
 
 	const tagSet = new Set();
 	const categorySet = new Set();
 
+	const noteSet = new Set();
+
 	const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+
+	const notesEdges = notesQueryResult.data.allJupyterNotebook.edges;
+	console.log(JSON.stringify(notesEdges, null, 4));
+	console.log(JSON.stringify(notesEdges[0], null, 4));
 
 	postsEdges.sort((postA, postB) => {
 		const dateA = moment(
@@ -156,6 +216,17 @@ exports.createPages = async ({ graphql, actions }) => {
 			context: {
 				category,
 			},
+		});
+	});
+
+	console.log("NOTE", notesEdges[0].node);
+	console.log("NOTE", notesEdges[0].node.fields);
+
+	notesEdges.forEach(note => {
+		createPage({
+			path: note.node.fields.slug,
+			component: notePage,
+			context: { note },
 		});
 	});
 };

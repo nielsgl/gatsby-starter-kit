@@ -17,7 +17,8 @@
 		],
 		"react/destructuring-assignment": "warn",
 		"react/no-access-state-in-setstate": "warn",
-		"import/no-unresolved": "warn"
+		"import/no-unresolved": "warn",
+		"no-unused-vars": "warn"
 	},
 	"settings": {
 		"import/resolver": {
