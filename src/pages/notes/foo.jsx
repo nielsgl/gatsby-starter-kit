@@ -2,9 +2,9 @@ import React, { PureComponent } from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 
-import SEO from "components/SEO/SEO";
+// import SEO from "components/SEO/SEO";
 import Layout from "layout";
-import PostListing from "components/PostListing/PostListing";
+// import PostListing from "components/PostListing/PostListing";
 // import PostListing from "../../components/PostListing/PostListing";
 
 import config from "../../../data/config";

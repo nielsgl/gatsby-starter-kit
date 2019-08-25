@@ -1,8 +1,8 @@
 ---
-title: "Katex Demo"
+title: "Katex Demo 3"
 cover: "https://unsplash.it/400/300/?random?BigTest"
 category: "math"
-date: "20/08/2019"
+date: "2019-08-20T06:30:04.335Z"
 slug: "Math-Katex Test"
 tags:
     - math

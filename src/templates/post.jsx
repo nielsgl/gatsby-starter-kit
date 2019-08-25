@@ -21,6 +21,7 @@ export default class PostTemplate extends PureComponent {
 		const { data, pageContext } = this.props;
 		const { slug } = pageContext;
 		const postNode = data.markdownRemark;
+
 		const post = postNode.frontmatter;
 		if (!post.id) {
 			post.id = slug;

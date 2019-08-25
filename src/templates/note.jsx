@@ -5,13 +5,13 @@ import { graphql } from "gatsby";
 import Layout from "layout";
 import UserInfo from "components/UserInfo/UserInfo";
 // import Disqus from "../components/Disqus/Disqus";
-import PostTags from "components/PostTags/PostTags";
-import SocialLinks from "components/SocialLinks/SocialLinks";
-import SEO from "components/SEO/SEO";
-import PostCategories from "components/PostCategories/PostCategories";
+// import PostTags from "components/PostTags/PostTags";
+// import SocialLinks from "components/SocialLinks/SocialLinks";
+// import SEO from "components/SEO/SEO";
+// import PostCategories from "components/PostCategories/PostCategories";
 import config from "../../data/config";
-// import "./b16-tomorrow-dark.css";
-import "prismjs/themes/prism-tomorrow.css";
+import "./b16-tomorrow-dark.css";
+// import "prismjs/themes/prism-tomorrow.css";
 import "./post.css";
 
 // import "katex/dist/katex.min.css";
@@ -20,8 +20,6 @@ export default class NoteTemplate extends PureComponent {
 	render() {
 		const { data, pageContext } = this.props;
 		const { slug } = pageContext;
-
-		console.log(data);
 
 		const postNode = data.jupyterNotebook;
 		const post = postNode.frontmatter || {};

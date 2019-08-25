@@ -1,10 +1,10 @@
 ---
-title: "My first post"
-date: "2019-08-20T16:30:04.335Z"
+title: "My first post 2"
+date: "2019-08-22T16:30:04.335Z"
 cover: "https://unsplash.it/400/300/?random?BigTest"
 description: "This is my first post"
 category: "test"
-slug: "Hello"
+slug: "My first post"
 tags:
     - test
 ---

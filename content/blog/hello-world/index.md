@@ -1,6 +1,6 @@
 ---
-title: Hello World Again
-date: "20/08/2019"
+title: Hello World Again 1
+date: "2019-08-23T06:30:04.335Z"
 description: "This is an optional description for SEO and Open Graph purposes, rather than the default generated excerpt."
 cover: "https://unsplash.it/400/300/?random?BigTest"
 category: "math"

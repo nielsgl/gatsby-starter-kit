@@ -37,22 +37,34 @@ export const pageQuery = graphql`
 		allMarkdownRemark(
 			limit: 2000
 			sort: { fields: [frontmatter___date], order: DESC }
+			filter: { fileAbsolutePath: { regex: "//blog//" } }
 		) {
 			edges {
 				node {
+					excerpt
+					timeToRead
 					fields {
 						slug
 						date
 					}
-					excerpt
-					timeToRead
 					frontmatter {
 						title
-						tags
 						cover
 						date
+						category
+						tags
+					}
+					fileAbsolutePath
+					wordCount {
+						paragraphs
+						sentences
+						words
 					}
 				}
+			}
+			totalCount
+			pageInfo {
+				perPage
 			}
 		}
 	}

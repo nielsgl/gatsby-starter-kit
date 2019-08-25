@@ -1,5 +1,5 @@
 ---
-title: "Angels of Mist"
+title: "Angels of Mist 6"
 cover: "https://unsplash.it/400/300/?random?AngelsofMist"
 category: "test3"
 date: "01/03/2017"
